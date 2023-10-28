@@ -8,5 +8,6 @@ Test your knowledge and enjoy a seamless user experience across devices!
 3. Responsive Design: Seamlessly interact with the quiz on various devices and screen sizes.
 # Usage
 1. Open https://quiz-app-bhanu.vercel.app/ in your browser to start the quiz.
+2. Clone the repository: `git clone https://github.com/bhanu0705/QuizApp`
 
 

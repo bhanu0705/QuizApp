@@ -42,16 +42,17 @@ let countdown;
 function startQuiz(){
     currIndex=0;
     score=0;
+    timerElement.style.display = "block";
     nextBtn.innerHTML="Next";
     showQuestion();
 }
+let interval;
 function startCountdown() {
     countdownElement.textContent = countdown; // Display initial countdown value
 
-    const interval = setInterval(() => {
+    interval = setInterval(() => {
         countdown--; // Decrease countdown value
         countdownElement.textContent = countdown; // Update countdown display
-
         if (countdown <= 0) {
             clearInterval(interval); // Clear the interval when countdown reaches 0
             handleNextBtn(); // Move to the next question automatically when time runs out
@@ -100,10 +101,12 @@ function selectAnswer(e){
         }
         button.disabled=true;
     });
+    clearInterval(interval);
     nextBtn.style.display="block";
 }
 function showScore(){
      resetState();
+     timerElement.style.display = "none";
      questionElement.innerHTML=`You scored ${score} out of ${questions.length}!`;
      nextBtn.innerHTML="Play Again";
      nextBtn.style.display="block";
@@ -121,6 +124,7 @@ nextBtn.addEventListener("click",()=>{
         handleNextBtn();
     }else{
         startQuiz();
+        
     }
 })
 startQuiz();

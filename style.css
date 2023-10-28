@@ -68,3 +68,24 @@ body{
 .incorrect{
     background: #e85959;
 }
+
+
+@media (max-width: 768px) {
+    .app {
+        width: 100%;
+        max-width: none;
+        margin: 50px auto 0;
+        padding: 8px;
+    }
+    .quiz h2 {
+        font-size: 21px;
+    }
+    .button {
+        font-size: 16px;
+        
+    }
+    #next-btn {
+        width: 100%;
+        font-size: 20px;
+    }
+}
